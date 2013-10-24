@@ -21,12 +21,13 @@ return array(
       'title' => 'Name',
       'select' => "CONCAT((:table).first_name, ' ', (:table).last_name)",
     ),
-    'first_name' => array(
-      'title' => 'Name',
+    'email' => array(
+      'title' => 'Email',
     ),
-    'last_name' => array(
-      'title' => 'Last Name'
+    'profile' => array(
+      'title' => 'Profile',
     ),
+
   ),
 
   /**
@@ -40,6 +41,14 @@ return array(
     'last_name' => array(
       'title' => 'Last Name',
     ),
+    'email' => array(
+      'title' => 'Email',
+    ),
+    'profile' => array(
+      'title' => 'Profile',
+    ),
+
+
   ),
 
   /**
@@ -54,6 +63,21 @@ return array(
       'title' => 'Last Name',
       'type' => 'text',
     ),
+    'email' => array(
+      'title' => 'Email',
+      'type' => 'text',
+    ),
+
+    'profile' => array(
+      'type' => 'enum',
+      'title' => 'Profile',
+      'options' => array(
+          'frontend' => 'Frontend DEV',
+          'backend' => 'Backend DEV',
+          'mobile' => 'Mobile DEV',
+      ),
+    ),
+
   ),
 
 );

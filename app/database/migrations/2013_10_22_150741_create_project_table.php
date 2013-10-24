@@ -1,9 +1,8 @@
 <?php
-
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Resource extends Migration {
+class CreateProjectTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +11,13 @@ class Resource extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('resource', function(Blueprint $table)
+		Schema::create('project', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('first_name');
-			$table->string('last_name');
-			$table->string('email')->unique();
-			
+			$table->string('name');
+			$table->string('customer');
+			$table->string('description');
+			$table->string('projectmanager');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +29,7 @@ class Resource extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('resource');
+		Schema::drop('project');
 	}
 
 }

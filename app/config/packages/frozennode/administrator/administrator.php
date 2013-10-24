@@ -51,7 +51,10 @@ return array(
 	 * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
 	 *	)
 	 */
-	'menu' => array(),
+	'menu' => array(
+		"Tables" => array("project", "resource", "activity"), 
+		),
+		
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
@@ -61,7 +64,8 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check();
+		return true;
+		//return Auth::check();
 	},
 
 	/**
@@ -84,7 +88,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'home_page' => '',
+	'home_page' => 'project',
 
 	/**
 	 * The login path is the path where Administrator will send the user if they fail a permission check
