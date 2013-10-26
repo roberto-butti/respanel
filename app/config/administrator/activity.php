@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Actors model config
+ * Activities model config
  */
 
 return array(

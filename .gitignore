@@ -3,3 +3,4 @@
 composer.phar
 composer.lock
 .DS_Store
+/app/database/seeds/my_array_data.php

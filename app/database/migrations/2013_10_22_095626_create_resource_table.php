@@ -19,6 +19,7 @@ class CreateResourceTable extends Migration {
 			$table->string('last_name');
 			$table->string('email')->unique();
 			$table->string('profile'); //Frontend / backend
+			$table->string('contract'); //DIP / CE / OUT
 			$table->timestamps();
 		});
 	}

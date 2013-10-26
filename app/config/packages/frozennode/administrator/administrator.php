@@ -52,7 +52,7 @@ return array(
 	 *	)
 	 */
 	'menu' => array(
-		"Tables" => array("project", "resource", "activity"), 
+		"Tables" => array("project", "resource", "activity", "page.admin.allocator"), 
 		),
 		
 

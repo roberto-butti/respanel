@@ -4,6 +4,24 @@
  * Actors model config
  */
 
+
+$field_profile= array(
+      'type' => 'enum',
+      'title' => 'Profile',
+      'options' => array(
+          'CTO' => "CTO",
+          'frontend' => 'Frontend DEV',
+          'backend' => 'Backend DEV',
+          'mobile' => 'Mobile DEV',
+      ));
+$field_contract= array(
+      'type' => 'enum',
+      'title' => 'Contract',
+      'options' => array(
+          'DIP' => "Dipendente",
+          'CE' => 'Consulente Esterno',
+          'OUT' => 'Outsourcing'
+      ));
 return array(
 
   'title' => 'Resources',
@@ -27,6 +45,7 @@ return array(
     'profile' => array(
       'title' => 'Profile',
     ),
+    'contract' => $field_contract,
 
   ),
 
@@ -44,12 +63,11 @@ return array(
     'email' => array(
       'title' => 'Email',
     ),
-    'profile' => array(
-      'title' => 'Profile',
-    ),
+    'profile' => $field_profile,
+    'contract' =>  $field_contract
 
 
-  ),
+  ), //end filters
 
   /**
    * The editable fields
@@ -68,16 +86,10 @@ return array(
       'type' => 'text',
     ),
 
-    'profile' => array(
-      'type' => 'enum',
-      'title' => 'Profile',
-      'options' => array(
-          'frontend' => 'Frontend DEV',
-          'backend' => 'Backend DEV',
-          'mobile' => 'Mobile DEV',
-      ),
-    ),
+    'profile' => $field_profile,
+    'contract' =>  $field_contract
+    )
 
-  ),
+  
 
 );
