@@ -52,7 +52,8 @@ return array(
 	 *	)
 	 */
 	'menu' => array(
-		"Tables" => array("project", "resource", "activity", "page.admin.allocator"), 
+		"Tables" => array("project", "resource", "activity"), 
+		"Calendar" => "page.admin.allocator"
 		),
 		
 
