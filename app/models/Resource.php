@@ -9,4 +9,10 @@ class Resource extends Eloquent {
    */
   protected $table = 'resource';
 
+  public function activities() {
+    return $this->hasMany('Activity', 'resource_id');  
+  }
+
+  
+
 }

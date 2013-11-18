@@ -25,6 +25,31 @@ class DatabaseSeeder extends Seeder {
 	 			)
 	 		);
  		}
+		DB::table('project')->delete();
+ 		foreach ($projects as $key => $value) {
+	 		$project = Project::create(
+	 			array(
+	 				'name' => $value[0],
+	 				'customer' => $value[1],
+	 				'description' => $value[2],
+	 				"projectmanager" => $value[3]
+	 			)
+	 		);
+ 		}
+
+		DB::table('activity')->delete();
+ 		foreach ($activities as $key => $value) {
+	 		$project = Activity::create(
+	 			array(
+					"date" => $value[0],
+					"hours" => $value[1],
+					"percent" => $value[2],
+					"allocation" => $value[3],
+					"resource_id" => $value[4],
+					"project_id" => $value[5],
+	 			)
+	 		);
+ 		}
 
 
 		// $this->call('UserTableSeeder');

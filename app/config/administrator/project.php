@@ -1,17 +1,11 @@
 <?php
-
 /**
- * Actors model config
+ * PROJECT model config
  */
-
 return array(
-
   'title' => 'Projects',
-
   'single' => 'project',
-
   'model' => 'Project',
-
   /**
    * The display columns
    */
@@ -24,9 +18,7 @@ return array(
     'projectmanager' => array(
       'title' => 'PM',
     ),
-
-  ),
-
+  ), /* end columns */
   /**
    * The filter set
    */
@@ -41,11 +33,7 @@ return array(
     'projectmanager' => array(
       'title' => 'PM',
     ),
-
-
-
-  ),
-
+  ), /* end filters */
   /**
    * The editable fields
    */
@@ -68,8 +56,5 @@ return array(
       'limit' => 300, //optional, defaults to no limit
       'height' => 130, //optional, defaults to 100
     ),
-
-
-  ),
-
+  ), /* end edit_fields */
 );

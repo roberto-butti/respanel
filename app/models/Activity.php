@@ -9,4 +9,15 @@ class Activity extends Eloquent {
    */
   protected $table = 'activity';
 
+  public function resource() {
+    return $this->belongsTo('Resource');
+  }
+
+  public function project() {
+    return $this->belongsTo('Project');
+    //
+  }
+
+
+
 }

@@ -16,10 +16,14 @@ return array(
    * The display columns
    */
   'columns' => array(
-    'id',
     'date' => array(
       'title' => 'Date',
     ),
+    'project_id' => array(
+      'title' => 'Progetto',
+      'relationship' => 'project',
+      'select' => "CONCAT((:table).name,' - ', (:table).customer)"
+      )
 
 
   ),
@@ -28,14 +32,27 @@ return array(
    * The filter set
    */
   'filters' => array(
-    'id',
+    
     'date' => array(
       'type' => 'date',
       'title' => 'Date',
       'date_format' => 'yy-mm-dd', //optional, will default to this value
     ),
+    'allocation' => array(
+      'type' => 'bool',
+      'title' => 'Confirmed',
+      
+    ),
 
-
+    'project' => array(
+      'type' => 'relationship',
+      'title' => 'project',
+      'name_field' => 'name',
+      'autocomplete' => true,
+          'num_options' => 5,
+    
+    ),
+    
 
 
   ),
@@ -63,6 +80,21 @@ return array(
       'type' => 'bool',
       'title' => 'Confirmed',
     ),
+
+    'project' => array(
+      'type' => 'relationship',
+      'title' => 'project',
+      'name_field' => 'name',
+      'autocomplete' => true,
+          'num_options' => 5,
+    'search_fields' => array("name", "customer")
+    ),
+        'resource' => array(
+      'type' => 'relationship',
+      'title' => 'resource',
+      'name_field' => 'last_name'
+    ),
+
 
 
 
