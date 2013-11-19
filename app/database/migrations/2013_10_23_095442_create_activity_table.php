@@ -15,9 +15,9 @@ class CreateActivityTable extends Migration {
 		{
 			$table->increments('id');
 			$table->date('date');
-			$table->integer('hours'); // 8 for a daywork
-			$table->integer('percent');
-			$table->integer('allocation'); //allocation, preallocation
+			$table->integer('hours')->default(8); // 8 for a daywork
+			$table->integer('percent')->default(100);
+			$table->integer('allocation')->default(true); //allocation, preallocation
 			$table->integer('resource_id'); //resource id
 			$table->integer('project_id'); //project id
 			$table->timestamps();
