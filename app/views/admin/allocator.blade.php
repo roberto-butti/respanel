@@ -1,6 +1,5 @@
 <div id="content" style="margin-top:50px">
-  Allocator
-{{ $month }}
+<h1>{{ $month }} {{ $year }}</h1>
 <table id="table">
   <thead>
     <th>Name</th>
