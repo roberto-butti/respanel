@@ -19,11 +19,21 @@ return array(
     'date' => array(
       'title' => 'Date',
     ),
+    'hours' => array(
+      'title' => 'h.'
+    ),
     'project_id' => array(
       'title' => 'Progetto',
       'relationship' => 'project',
       'select' => "CONCAT((:table).name,' - ', (:table).customer)"
-      )
+    ),
+    'resource_id' => array(
+      'title' => 'Risorsa',
+      'relationship' => 'resource',
+      'select' => "CONCAT((:table).last_name,' - ', (:table).profile)"
+
+    ),
+
 
 
   ),
@@ -70,11 +80,13 @@ return array(
       'type' => 'number',
       'symbol' => 'h',
       'title' => 'Hours',
+      'value' => 8
     ),
     'percent' => array(
       'type' => 'number',
       'symbol' => '%',
       'title' => 'Percent (100% = a workday)',
+      'value' => '100'
     ),
     'allocation' => array(
       'type' => 'bool',
@@ -87,7 +99,7 @@ return array(
       'name_field' => 'name',
       'autocomplete' => true,
           'num_options' => 5,
-    'search_fields' => array("name", "customer")
+    //'search_fields' => array("name", "customer")
     ),
         'resource' => array(
       'type' => 'relationship',
